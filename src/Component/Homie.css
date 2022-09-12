@@ -1,0 +1,40 @@
+
+
+.slider-section {
+ margin-top: 5px;
+ overflow: hidden;
+}
+
+
+
+
+
+.slider-page {
+ padding: 50px;
+ text-align: center;
+ width: auto;
+height: 100vh;
+margin-bottom: 4px;
+ box-sizing: border-box;
+
+
+}
+
+
+
+.slick-prev:before {
+ color: green !important;
+ font-size: 30px;
+}
+
+.slick-next:before {
+ color: green !important;
+ font-size: 30px;
+}
+
+@media (max-width:800px) {
+ .slider-page {
+height: 100vh;
+ }
+ 
+}
