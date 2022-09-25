@@ -1,0 +1,62 @@
+.term {
+background-color: white;
+ margin-top: 60px;
+ padding: 30px;
+ width: 100%;
+}
+
+.term h2 {
+ color: #e4e4e4;
+ text-align: center;
+ font-family: Montserrat;
+ font-weight: 700;
+ margin-bottom: 20px;
+ text-transform: uppercase;
+}
+
+.term li {
+ color: rgb(255, 255, 255);
+ padding: 20px 0;
+ font-family: Montserrat;
+}
+
+.condition{
+ background-color: #01411c;
+  padding: 45px 15px;
+}
+
+.term ul {
+ list-style-type: decimal;
+ line-height: 40px;
+  font-size: 20px;
+}
+.papper-holder{
+
+ background-color:#01411c;
+}
+
+.term span {
+ color: white;
+}
+
+
+
+@media (min-width:1000px) {
+ .term ul {
+   font-size: 20px;
+   margin: 0 50px;
+    line-height: 35px;
+  }
+
+    .term li {
+    padding: 10px 0;
+    }
+    
+ 
+        .papper-holder {
+         margin: 50px auto;
+         
+         width: 800px;
+         
+        }
+}

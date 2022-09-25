@@ -9,6 +9,8 @@
 
 .bout {
 
+  
+
  box-shadow: 4px 11px 8px -9px rgba(0, 0, 0, 0.88);
   -webkit-box-shadow: 4px 11px 8px -9px rgba(0, 0, 0, 0.88);
   -moz-box-shadow: 4px 11px 8px -9px rgba(0, 0, 0, 0.88);
@@ -17,8 +19,90 @@
 
 }
 
+.newskill, .overlay {
+ position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 30px;
+}
+
+.overlay {
+  background-color: rgba(99, 94, 94, 0.551);
+}
+.toggle-pop {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  line-height: 1.4;
+  padding: 14px 30px;
+  border-radius: 5px;
+  max-width: 600px;
+  min-width: 300px;
+  
+
+}
+
+.close-btn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 7px;
+  border: none;
+  background-color: black;
+  color: white;
+
+}
+
+.about-me {
+margin-top: auto;
+margin-bottom: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 50px 20px;
+}
+
+.relate {
+position: absolute;
+max-width: 220px;
+height: auto;
+
+ 
+}
+
+.word {
+  height: 50px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+
+}
+
+.testi-image img {
+  height: 90px;
+  width: 90px;
+  margin-top: 30px;
+  border-radius: 90px;
+  object-fit: cover;
+ 
+  border: 2px solid orange;
+}
+.testimony-section {
+  margin-top: 50px;
+}
+
+
+
 .about-cont {
- padding: 20px;
+ padding:180px 20px;
  background-color: #01411c;
  color: white;
  justify-content: center;
@@ -30,6 +114,29 @@
   height: 500px;
 }
 
+.test-sec {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.test-title h3 {
+  text-align: center;
+}
+
+
+.testi {
+  margin-bottom: 20px;
+  max-width: 290px;
+  margin-top: 30px;
+
+}
+
+.paper {
+  padding-top: 30px;
+  border: 1px solid gray;
+  border-top: none;
+}
+
 @media (max-width:1000px) {
  .bout {
  line-height: 40px;
@@ -38,5 +145,7 @@
 
   .about-cont {
  height: auto;
+  padding: 20px;
   }
 }
+

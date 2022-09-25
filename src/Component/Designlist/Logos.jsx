@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Buttons from "../Buttons";
 import fly01 from '../Images/Logo/logo01.jpg'
 import fly02 from '../Images/Logo/logo02.jpg'
+import logo2121 from '../Images/Logo/logo2121.jpeg'
 import { useState } from "react";
 
 
@@ -18,6 +19,7 @@ const Logos = () => {
   const fliers = [
         {img:fly01},
         {img:fly02},
+        {img:logo2121},
       
   ];
 
@@ -64,9 +66,8 @@ const Logos = () => {
 
       <Fade right>
       <Grid Item>
-        <Typography>Product Code : #189320</Typography>
-        <Link to="checkout"> <Buttons act={"Order me"} /> </Link>
-        
+        <Typography>Product Code : #017001DL</Typography>
+      <Link to="checkout"> <Buttons act={"Order me"} /> </Link>
         </Grid>
 
         </Fade>
@@ -93,12 +94,13 @@ const Logos = () => {
            </div>
 
       </div>
-      <ScrollToTop
+       <ScrollToTop
       height='20'
       smooth={true}
       width='20'
-      style={{borderRadius:'90px', backgroundColor:'blue'}}
+      style={{borderRadius:'90px', zIndex:"9999", marginBottom:'40px',  backgroundColor:'blue'}}
       color='white'
+      component={<p style={{ color: "white", marginTop:'10px' }}>UP</p>}
        />
       </div>
     </Container>

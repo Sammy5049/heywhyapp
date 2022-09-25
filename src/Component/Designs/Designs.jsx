@@ -23,6 +23,7 @@ import { Link } from "react-router-dom";
 import './Designs.css'
 import { useState } from "react";
 
+import ScrollToTop from 'react-scroll-to-top';
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import Bounce from  'react-reveal/Bounce';
@@ -128,9 +129,9 @@ const Designs = () => {
 
                   
              <Grid key={index}  item>
-             <Link
+             <a
               ovelay
-              to={dezign.link}
+              href={dezign.link}
               textColor="inherit"
               underline="none"
               fontWeight="md"
@@ -175,7 +176,7 @@ const Designs = () => {
               </Card>
               </Zoom>
               
-            </Link>
+            </a>
             </Grid>
               ))}
 
@@ -184,10 +185,20 @@ const Designs = () => {
       </Grid>
 
         </div>
+
+
       </div>
      
-      
-       
+        <ScrollToTop
+      height='20'
+      smooth={true}
+      width='20'
+      style={{borderRadius:'90px',
+      zIndex:"9999", marginBottom:'40px', 
+      backgroundColor:'#01411c'}}
+      color='white'
+      component={<p style={{ color: "white", marginTop:'10px' }}>Up</p>}
+       />
 
      
 

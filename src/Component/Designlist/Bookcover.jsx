@@ -67,9 +67,8 @@ const Bookcover = ({design}) => {
 
        <Fade right>
       <Grid Item>
-        <Typography>Product Code : #189320</Typography>
+        <Typography>Product Code : #017008BO</Typography>
         <Link to="checkout"> <Buttons act={"Order me"} /> </Link>
-        
         </Grid>
 
         </Fade>
@@ -98,12 +97,13 @@ const Bookcover = ({design}) => {
 
       </div>
 
-      <ScrollToTop
+       <ScrollToTop
       height='20'
       smooth={true}
       width='20'
-      style={{borderRadius:'90px', backgroundColor:'blue'}}
+      style={{borderRadius:'90px', zIndex:"9999", marginBottom:'40px', backgroundColor:'blue'}}
       color='white'
+      component={<p style={{ color: "white", marginTop:'10px' }}>UP</p>}
        />
 
        </div>

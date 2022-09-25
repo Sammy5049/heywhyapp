@@ -2,6 +2,9 @@ import { Grid, Typography, Container, Card } from "@mui/material";
 import { Link } from "react-router-dom";
 import Buttons from "../Buttons";
 import fly01 from '../Images/Birthdays/birt.jpg'
+import fly01a from '../Images/Flyers/fly1.jpg'
+
+import birth44 from '../Images/Birthdays/birth44.jpeg'
 import { useState } from "react";
 
 
@@ -15,6 +18,8 @@ const Birthday = () => {
 
   const fliers = [
         {img:fly01},
+        {img:birth44},
+        {img:fly01a},
       
   ];
 
@@ -62,9 +67,8 @@ const Birthday = () => {
 
       <Fade right>
       <Grid Item>
-        <Typography>Product Code : #189320</Typography>
+        <Typography>Product Code : #017006BI</Typography>
         <Link to="checkout"> <Buttons act={"Order me"} /> </Link>
-        
         </Grid>
 
         </Fade>
@@ -91,12 +95,13 @@ const Birthday = () => {
            </div>
 
       </div>
-      <ScrollToTop
+       <ScrollToTop
       height='20'
       smooth={true}
       width='20'
-      style={{borderRadius:'90px', backgroundColor:'blue'}}
+      style={{borderRadius:'90px', zIndex:"9999", marginBottom:'40px',  backgroundColor:'blue'}}
       color='white'
+      component={<p style={{ color: "white", marginTop:'10px' }}>UP</p>}
        />
 
        </div>

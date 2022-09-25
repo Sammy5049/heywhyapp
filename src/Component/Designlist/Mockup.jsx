@@ -2,9 +2,9 @@ import { Grid, Typography, Container, Card } from "@mui/material";
 import { Link } from "react-router-dom";
 import Buttons from "../Buttons";
 import fly01 from '../Images/Pictures/Mockup.jpg'
-import fly02 from '../Images/Flyers/fly2.jpg'
 import { useState } from "react";
 
+import brannd from '../Images/Branding/brannd.jpeg'
 
 import ScrollToTop from 'react-scroll-to-top';
 import Zoom from 'react-reveal/Zoom';
@@ -16,7 +16,7 @@ const Mockup = () => {
 
   const fliers = [
         {img:fly01},
-        {img:fly02},
+        {img:brannd},
       
   ];
 
@@ -63,9 +63,8 @@ const Mockup = () => {
 
       <Fade right>
       <Grid Item>
-        <Typography>Product Code : #189320</Typography>
-        <Link to="checkout"> <Buttons act={"Order me"} /> </Link>
-        
+        <Typography>Product Code : #017004DK</Typography>
+       <Link to="checkout"> <Buttons act={"Order me"} /> </Link>
         </Grid>
 
         </Fade>
@@ -80,7 +79,7 @@ const Mockup = () => {
                  <Zoom>
                 <Card elevation={20} sx={{ maxWidth: 350, margin:"60px",}}>
                
-                 <img src={fly.img} height='340' width='100%' alt="time on me" />
+                 <img src={fly.img} height='auto' width='100%' alt="time on me" />
               </Card>
                </Zoom>
               </div>
@@ -97,8 +96,9 @@ const Mockup = () => {
       height='20'
       smooth={true}
       width='20'
-      style={{borderRadius:'90px', backgroundColor:'blue'}}
+      style={{borderRadius:'90px', zIndex:"9999", marginBottom:'40px',  backgroundColor:'blue'}}
       color='white'
+      component={<p style={{ color: "white", marginTop:'10px' }}>UP</p>}
        />
 
        </div>

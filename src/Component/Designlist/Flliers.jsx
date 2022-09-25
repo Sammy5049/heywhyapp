@@ -20,18 +20,22 @@ import fly016 from '../Images/Flyers/fly16.jpg'
 import fly017 from '../Images/Flyers/fly17.jpg'
 import fly018 from '../Images/Flyers/fly18.jpg'
 import fly019 from '../Images/Flyers/fly19.jpg'
+import Idkn from '../Images/Flyers/Idkn.jpeg'
+import fli from '../Images/Flyers/fli.jpeg'
 
 
 import ScrollToTop from 'react-scroll-to-top';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import Bounce from 'react-reveal/Bounce';
-
+import { useState } from "react";
+import './flytest.css'
+import Switch from 'react-switch'
 
 const Flliers = () => {
 
   const fliers = [
-        {img:fly01},
+        
         {img:fly02},
         {img:fly03},
         {img:fly04},
@@ -50,8 +54,15 @@ const Flliers = () => {
         {img:fly017},
         {img:fly018},
         {img:fly019},
+        {img:Idkn},
+        {img:fli},
       
   ];
+  const [talk, setTalk] = useState(false)
+  
+  const getTheMoney = () => {
+   setTalk(!talk);
+  }
 
   return (
     < Container  className="convic">
@@ -95,9 +106,10 @@ const Flliers = () => {
 
       <Fade right>
       <Grid Item>
-        <Typography>Product Code : #189320</Typography>
-        <Link to="checkout"> <Buttons act={"Order me"} /> </Link>
-        
+        <Typography>Product Code : #017002YF</Typography>
+       <Link to="checkout"> <Buttons act={"Order me"} /> </Link>
+   {( talk &&
+   <button style={{padding:'5px 8px', border:'none'}} onClick={getTheMoney}>Open me now</button>)}
         </Grid>
 
         </Fade>
@@ -122,15 +134,79 @@ const Flliers = () => {
 
           ))}
            </div>
+
+           {talk && (
+            <div style={{
+                position:'fixed',
+                top:0,
+                bottom:0,
+                right:0,
+                left:0,
+                width:"100vw",
+                height:"100vh",
+
+              }} className="commit">
+
+              <div  style={{
+                position:'fixed',
+                top:0,
+                bottom:0,
+                right:0,
+                left:0,
+                width:"100vw",
+                height:"100vh",
+                backgroundColor:'rgba(99, 94, 94, 0.851)',
+                padding:'30px'
+
+
+
+
+              }}
+              onClick={getTheMoney} className="vernow"></div>
+              <div 
+              style={{
+                position:'absolute',
+                  top:"40%",
+                  left:"70%",
+                  maxWidth:'400px',
+                  minWidth:'300px',
+                  padding:'20px 30px',
+                  transform:'translate(-50%, -50%)',
+                  lineHeight:'1.4',
+                 color:'black',
+                 backgroundColor:'white'
+
+              }} className="therealshow">
+
+                
+        <Switch />
+                <form className="form-containe">
+                  <div className="filter-form">
+                     <label className="form-label" >Backup</label>
+                     <input type="text" />
+
+                  </div>
+                 
+
+                </form>
+                <h6>Seem new me</h6>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ea nihil reiciendis ullam aspernatur et cum dolorem autem, repellendus obcaecati recusandae aut? Asperiores recusandae nesciunt, quidem necessitatibus officiis sequi. Cum.</p>
+
+                 <button className="verow" onClick={getTheMoney}>Close me</button>
+              </div>
+             
+            </div>
+           )}
            
 
       
-       <ScrollToTop
+      <ScrollToTop
       height='20'
       smooth={true}
       width='20'
-      style={{borderRadius:'90px', backgroundColor:'blue'}}
+      style={{borderRadius:'90px', zIndex:"9999", marginBottom:'40px',  backgroundColor:'blue'}}
       color='white'
+      component={<p style={{ color: "white", marginTop:'10px' }}>Up</p>}
        />
          </div>
       

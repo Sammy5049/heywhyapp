@@ -15,6 +15,7 @@ import fly010 from '../Images/Branding/brand10.jpg'
 import fly011 from '../Images/Branding/brand11.jpg'
 import fly012 from '../Images/Branding/brand12.jpg'
 import fly013 from '../Images/Branding/Vest.jpg'
+
 import ScrollToTop from 'react-scroll-to-top';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
@@ -36,7 +37,8 @@ const Branding = ({design}) => {
         {img:fly010},
         {img:fly011},
         {img:fly012},
-        {img:fly013}
+        {img:fly013},
+
       
   ];
  
@@ -81,19 +83,12 @@ const Branding = ({design}) => {
         </Fade>
       </Grid>
 
-      <ScrollToTop
-      height='20'
-      smooth={true}
-      width='20'
-      style={{borderRadius:'90px', backgroundColor:'blue'}}
-      color='white'
-       />
+      
 
        <Fade right>
       <Grid Item>
-        <Typography>Product Code : #189320</Typography>
-        <Link to="checkout"> <Buttons act={"Order me"} /> </Link>
-        
+        <Typography>Product Code : #017004BG</Typography>
+      <Link to="checkout"> <Buttons act={"Order me"} /> </Link>
         </Grid>
 
         </Fade>
@@ -120,6 +115,15 @@ const Branding = ({design}) => {
            </div>
 
       </div>
+
+       <ScrollToTop
+      height='20'
+      smooth={true}
+      width='20'
+      style={{borderRadius:'90px', zIndex:"9999", marginBottom:'40px', backgroundColor:'blue'}}
+      color='white'
+      component={<p style={{ color: "white", marginTop:'10px' }}>Up</p>}
+       />
            
      </Container>
   )

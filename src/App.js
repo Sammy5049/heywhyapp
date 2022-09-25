@@ -7,7 +7,6 @@ import Appbar from "./Component/Appbar";
 import Designs from "./Component/Designs/Designs";
 import Promo from "./Component/Promo/Promo";
 import { BrowserRouter, Routes, Route,  } from 'react-router-dom'
-import ContactUs from "./Component/ContactUs";
 import Logos from "./Component/Designlist/Logos";
 import Flliers from "./Component/Designlist/Flliers";
 import Branding from "./Component/Designlist/Branding";
@@ -20,6 +19,9 @@ import Weddingiv from "./Component/Designlist/Weddingiv";
 import Birthday from "./Component/Designlist/Birthday";
 import Mockup from "./Component/Designlist/Mockup";
 import Checkout from "./Checkout";
+import Contact from "./Component/Contact/Contact";
+import Footie from "./Component/Foofter/Footie";
+import Term from "./Component/Term";
 //import Search from "./Component/Search/Search";
 
 //import Navbar from './Component/Navbar';
@@ -28,7 +30,7 @@ import Checkout from "./Checkout";
 
 function App({designs}) {
   useEffect(() => {
-    document.title = "Heywey";
+    document.title = "Heywhy";
   }, []);
   return (
 
@@ -40,7 +42,7 @@ function App({designs}) {
         <Route  path='/promo'  element={<Promo />} />
         <Route  path='/designs'  element={ <Designs />} />
         <Route  path='/aboutus'  element={<AboutUs />} />
-        <Route  path='/contactus'  element={<ContactUs />} />
+        <Route  path='/contact'  element={<Contact />} />
 
         <Route  path='/flliers'  element={<Flliers  />} />
         <Route  path='/branding'  element={<Branding />} />
@@ -52,6 +54,7 @@ function App({designs}) {
         <Route  path='/weddingiv'  element={<Weddingiv  />} />
         <Route  path='/mockup'  element={<Mockup  />} />
         <Route  path='/others'  element={<Typographypage  />} />
+        <Route  path='/terms'  element={<Term  />} />
         
         
 
@@ -72,6 +75,7 @@ function App({designs}) {
        
         
       </Routes>
+      <Footie />
       </div>
     </BrowserRouter>
     

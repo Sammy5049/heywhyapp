@@ -1,0 +1,72 @@
+.title-why-cover img {
+ height: 70%;
+ width: 100%;
+ object-fit: cover;
+ cursor: pointer;
+ border-radius: 5px 5px 0 0;
+ -webkit-transition: all 2s 0s ease-in-out;
+  -moz-transition: all 2s 0s ease-in-out;
+  -o-transition: all 2s 0s ease-in-out;
+  transition: all 2s 0s ease-in-out;
+}
+
+.title-why-cover img:hover {
+ transform: scale(0.95);
+}
+
+.title-why-papper {
+display: flex;
+ flex-direction: column;
+ align-items: center;
+ width: 100%;
+  height: 200px;
+}
+
+
+.title-why-cover {
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: 220px;
+  margin-bottom: 120px;
+   padding: 0 15px 10px 15px;
+}
+
+
+
+
+
+
+
+.title-why-papper h5 {
+ background-color: white;
+ padding: 5px;
+ margin-top: -10px;
+ cursor: pointer;
+ border-radius: 3px;
+ -webkit-transition: all 2s 0s ease-in-out;
+  -moz-transition: all 2s 0s ease-in-out;
+  -o-transition: all 2s 0s ease-in-out;
+  transition: all 2s 0s ease-in-out;
+}
+
+.service {
+ background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)) , url('../../Images/backofserv.jpg');
+ background-position: center;
+ background-size: cover;
+  padding: 150px 50px 80px 50px;
+}
+
+
+
+.title-why-papper h5:hover{
+ color: green;
+}
+
+.title-why-cover p {
+color: rgb(204, 194, 194);
+font-size: 14px;
+max-width: 180px;
+}
+

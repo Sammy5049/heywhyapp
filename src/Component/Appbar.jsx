@@ -1,6 +1,6 @@
 import { useMediaQuery, useTheme } from "@mui/material"
+import Bottombar from "./Bottonbar/Bottombar";
 import DesktopApp from "./Desktop/DesktopApp";
-import MobileApp from "./Mobile/MobileApp";
 
 
 const Appbar = () => {
@@ -9,7 +9,7 @@ const Appbar = () => {
  const match = useMediaQuery(theme.breakpoints.down("md"))
   return (
     <>
-     {match ? <MobileApp /> : <DesktopApp />}
+     {match ? <Bottombar /> : <DesktopApp />}
     </>
   )
 }

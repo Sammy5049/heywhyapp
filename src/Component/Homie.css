@@ -20,6 +20,17 @@ margin-bottom: 4px;
 
 }
 
+.slider-pag {
+ padding: 50px;
+ text-align: center;
+ width: auto;
+ height: 800px;
+ margin-bottom: 4px;
+ box-sizing: border-box;
+
+
+}
+
 
 
 .slick-prev:before {
@@ -38,3 +49,4 @@ height: 100vh;
  }
  
 }
+

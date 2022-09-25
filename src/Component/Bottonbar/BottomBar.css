@@ -1,0 +1,53 @@
+.logo-name {
+ display: flex;
+ align-items: center;
+}
+
+.logo-icon svg {
+ color: #02933d;
+ font-size: 5.8rem;
+}
+
+
+.logo-name .logo h3 {
+ font-size: 3.3rem;
+ font-weight: 600;
+ font-family: Roboto;
+ color: #02933d;
+
+}
+
+
+.logo a {
+ text-decoration: none;
+}
+
+@media (max-width:490px) {
+ .logo-name .logo h3 {
+  font-size: 2.2rem;
+ }
+
+ .logo-icon svg {
+  font-size: 3.3rem;
+ }
+}
+
+@media (max-width:360px) {
+ .logo-name .logo h3 {
+  font-size: 1.2rem;
+ }
+
+ .logo-icon svg {
+  font-size: 2.3rem;
+ }
+}
+
+@media (max-width:260px) {
+ .logo-name .logo h3 {
+  font-size: .8rem;
+ }
+
+ .logo-icon svg {
+  font-size: 1.3rem;
+ }
+}
