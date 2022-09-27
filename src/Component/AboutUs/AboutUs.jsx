@@ -17,6 +17,7 @@ import Bounce from "react-reveal/Bounce";
 import Slide from "react-reveal/Slide";
 import Dummy from "../Dummy/Dummy";
 import { useState } from "react";
+import GoToTop from "../Gototop";
 
 const AboutUs = () => {
   const theme = useTheme();
@@ -126,7 +127,7 @@ const AboutUs = () => {
         </Grid>
 
         <Grid className="about-cont" sm={10} md={6} item>
-          <Slide right>
+          <Slide top>
             <Typography
               className="bout"
               sx={{
@@ -189,6 +190,8 @@ const AboutUs = () => {
         color="white"
         component={<p style={{ color: "white", marginTop: "10px" }}>Up</p>}
       />
+
+       <GoToTop/>
     </div>
   );
 };

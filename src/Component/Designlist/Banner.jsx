@@ -1,6 +1,6 @@
 
-import { Grid, Typography, Container, Card } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Grid, Typography, Container, Card , useTheme} from "@mui/material";
+import { Link, NavLink } from "react-router-dom";
 import Buttons from "../Buttons";
 import fly01 from '../Images/Banners/banner01.jpg'
 import fly02 from '../Images/Banners/banner002.jpg'
@@ -10,8 +10,11 @@ import ScrollToTop from 'react-scroll-to-top';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import Bounce from 'react-reveal/Bounce';
+import GoToTop from "../Gototop";
 
 const Banner = ({design}) => {
+  
+ const theme = useTheme();
 
   
   const fliers = [
@@ -34,7 +37,9 @@ const Banner = ({design}) => {
             padding: 4,
             fontFamily: "Montserrat",
             color: "#01411c",
-            textTransform:'uppercase'
+            textTransform:'uppercase',
+               fontSize:'32px',
+                [theme.breakpoints.down('sm')]:{fontSize:'24px'}
           }}
           display={"flex"}
           justifyContent={"center"}
@@ -45,9 +50,9 @@ const Banner = ({design}) => {
         </Typography>
 
         </Bounce>
-        <Fade right>
+        <Fade >
          <Typography 
-        sx={{backgroundColor:'#01411c', width:'180px',borderRadius:'10px', height:'8px', display:'block' , margin: '-30px auto 20px auto'}}
+        sx={{backgroundColor:'#01411c', width:'140px',borderRadius:'10px', height:'4px', display:'block' , margin: '-30px auto 20px auto'}}
         
         display={"flex"}
           justifyContent={"center"}
@@ -61,10 +66,11 @@ const Banner = ({design}) => {
         </Fade>
       </Grid>
 
-       <Fade right>
+       <Fade bottom>
       <Grid Item>
         <Typography>Product Code : #017005BN</Typography>
-        <Link to="checkout"> <Buttons act={"Order me"} /> </Link>
+         <Typography style={{fontWeight:'800' , fontSize:"35px" }}>Price: <span style={{color:'red', fontStyle:'italic'}}>N10,000</span></Typography>
+        <NavLink to="checkout"> <Buttons act={"Order me"} /> </NavLink>
         </Grid>
 
         </Fade>
@@ -102,6 +108,7 @@ const Banner = ({design}) => {
        />
 
        </div>
+         <GoToTop/>
            
      </Container>
   )

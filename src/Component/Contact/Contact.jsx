@@ -13,6 +13,7 @@ import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import Bounce from 'react-reveal/Bounce';
 import Slide from 'react-reveal/Slide';
+import GoToTop from "../Gototop";
 
 const Contact = () => {
   const form = useRef();
@@ -102,7 +103,7 @@ const Contact = () => {
       <form ref={form} onSubmit={handleSubmit} className="form-container">
 
         <p style={{color:'white', fontSize:'20px', fontWeight:'600'}}>Contact Form</p>
-           <Slide left>
+           <Zoom bottom>
         <div className="contact-form">
        
             <label className="form-label" style={{ marginTop: "10px" }}>Name</label>
@@ -117,9 +118,9 @@ const Contact = () => {
           placeholder="Mary Peterson"
         />
         </div>
-          </Slide>
+          </Zoom>
 
-        <Slide right>
+        <Zoom top>
 
       <div className="contact-form">
 
@@ -134,7 +135,7 @@ const Contact = () => {
           placeholder="mary262@gmail.com"
         />
       </div>
-        </Slide>
+        </Zoom>
 
 
             
@@ -157,7 +158,7 @@ const Contact = () => {
         </Fade>
             
 
-             <Slide right>
+             <Zoom bottom>
               
                 <div className="contact-form">
 
@@ -172,7 +173,7 @@ const Contact = () => {
           placeholder="Type your message here..."
         />
                 </div>
-            </Slide>
+            </Zoom>
 
             <Bounce top>
               
@@ -266,6 +267,8 @@ const Contact = () => {
         pauseOnHover
         autoClose={10000}
       />
+
+       <GoToTop/>
     </div>
   );
 };

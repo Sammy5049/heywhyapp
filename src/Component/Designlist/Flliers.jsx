@@ -1,5 +1,5 @@
 import { Grid, Typography, Container, Card } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 import Buttons from "../Buttons";
 import fly01 from '../Images/Flyers/fly1.jpg'
 import fly02 from '../Images/Flyers/fly2.jpg'
@@ -31,6 +31,7 @@ import Bounce from 'react-reveal/Bounce';
 import { useState } from "react";
 import './flytest.css'
 import Switch from 'react-switch'
+import GoToTop from "../Gototop";
 
 const Flliers = () => {
 
@@ -77,20 +78,21 @@ const Flliers = () => {
             padding: 4,
             fontFamily: "Montserrat",
             color: "#01411c",
-            textTransform:'uppercase'
+            textTransform:'uppercase',
+               fontSize:'32px'
           }}
           display={"flex"}
           justifyContent={"center"}
           variant="h3"
           component={"h1"}
         >
-          FLIERS
+          Flyers
         </Typography>
 
         </Bounce>
-        <Fade right>
+        <Fade top>
          <Typography 
-        sx={{backgroundColor:'#01411c', width:'110px',borderRadius:'10px', height:'8px', display:'block' , margin: '-30px auto 20px auto'}}
+        sx={{backgroundColor:'#01411c', width:'110px',borderRadius:'10px', height:'4px', display:'block' , margin: '-30px auto 20px auto'}}
         
         display={"flex"}
           justifyContent={"center"}
@@ -104,10 +106,11 @@ const Flliers = () => {
         </Fade>
     
 
-      <Fade right>
+      <Fade bottom>
       <Grid Item>
         <Typography>Product Code : #017002YF</Typography>
-       <Link to="checkout"> <Buttons act={"Order me"} /> </Link>
+        <Typography style={{fontWeight:'800' , fontSize:"35px" }}>Price: <span style={{color:'red', fontStyle:'italic'}}>N7,000</span></Typography>
+       <NavLink to="checkout"> <Buttons act={"Order me"} /> </NavLink>
    {( talk &&
    <button style={{padding:'5px 8px', border:'none'}} onClick={getTheMoney}>Open me now</button>)}
         </Grid>
@@ -209,6 +212,7 @@ const Flliers = () => {
       component={<p style={{ color: "white", marginTop:'10px' }}>Up</p>}
        />
          </div>
+         <GoToTop/>
       
     </Container>
   );

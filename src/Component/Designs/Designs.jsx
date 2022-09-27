@@ -19,7 +19,7 @@ import others from '../Images/Pictures/others.jpg'
 import bookevent from '../Images/Book covers/cover2.jpg'
 import Mockup from '../Images/Pictures/Mockup.jpg'
 import weddingiv from '../Images/Wedding IV/weddingiv.jpeg'
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 import './Designs.css'
 import { useState } from "react";
 
@@ -27,6 +27,7 @@ import ScrollToTop from 'react-scroll-to-top';
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import Bounce from  'react-reveal/Bounce';
+import GoToTop from "../Gototop";
 
  
 
@@ -129,9 +130,9 @@ const Designs = () => {
 
                   
              <Grid key={index}  item>
-             <a
+             <NavLink
               ovelay
-              href={dezign.link}
+              to={dezign.link}
               textColor="inherit"
               underline="none"
               fontWeight="md"
@@ -176,7 +177,7 @@ const Designs = () => {
               </Card>
               </Zoom>
               
-            </a>
+            </NavLink>
             </Grid>
               ))}
 
@@ -200,7 +201,7 @@ const Designs = () => {
       component={<p style={{ color: "white", marginTop:'10px' }}>Up</p>}
        />
 
-     
+     <GoToTop/>
 
     </Container>
   );

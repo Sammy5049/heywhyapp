@@ -11,7 +11,8 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
-
+import {NavLink} from 'react-router-dom';
+import './Drawal.css'
 import React, { useState } from "react";
 
 
@@ -35,18 +36,18 @@ const Drawal = () => {
             }}
           />
         </IconButton>
-        <List sx={{ mt: "30px" }}>
-          <ListItemButton component="a" href="/" onClick={handleClose}>
-            <ListItemText>Home <Divider /></ListItemText>
+        <List className="mmmm" sx={{ mt: "30px" }}>
+          <ListItemButton  onClick={handleClose}>
+            <ListItemText> <NavLink to='/' className='menu-menu'> Home</NavLink>  <Divider /></ListItemText>
           </ListItemButton>
-          <ListItemButton component="a" href="/designs" onClick={handleClose}>
-            <ListItemText>Designs <Divider /></ListItemText>
+          <ListItemButton onClick={handleClose}>
+            <ListItemText><NavLink to='/designs' className='menu-menu'> Designs</NavLink>  <Divider /></ListItemText>
           </ListItemButton>
-          <ListItemButton component="a" href="/contact" onClick={handleClose}>
-            <ListItemText>Contact Us <Divider /></ListItemText>
+          <ListItemButton  onClick={handleClose}>
+            <ListItemText><NavLink to='/contact' className='menu-menu'> Contact Us </NavLink> <Divider /></ListItemText>
           </ListItemButton>
-          <ListItemButton component="a" href="/aboutus" onClick={handleClose}>
-            <ListItemText>About Us <Divider /></ListItemText>
+          <ListItemButton onClick={handleClose}>
+            <ListItemText><NavLink to='/aboutus' className='menu-menu'> About Us</NavLink>  <Divider /></ListItemText>
           </ListItemButton>
      
           <ListItemText>

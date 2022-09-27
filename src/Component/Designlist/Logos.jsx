@@ -1,5 +1,5 @@
-import { Grid, Typography, Container, Card } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Grid, Typography, Container, Card,useTheme } from "@mui/material";
+import { Link ,NavLink } from "react-router-dom";
 import Buttons from "../Buttons";
 import fly01 from '../Images/Logo/logo01.jpg'
 import fly02 from '../Images/Logo/logo02.jpg'
@@ -12,9 +12,12 @@ import Bounce from 'react-reveal/Bounce';
 
 import ScrollToTop from 'react-scroll-to-top';
 import Zoom from 'react-reveal/Zoom';
+import GoToTop from "../Gototop";
 
 
 const Logos = () => {
+  
+ const theme = useTheme();
 
   const fliers = [
         {img:fly01},
@@ -37,7 +40,11 @@ const Logos = () => {
             padding: 4,
             fontFamily: "Montserrat",
             color: "#01411c",
-            textTransform:'uppercase'
+            textTransform:'uppercase',
+               fontSize:'32px',
+               
+               [theme.breakpoints.down('sm')]:{fontSize:'24px'}
+
           }}
           display={"flex"}
           justifyContent={"center"}
@@ -48,9 +55,9 @@ const Logos = () => {
         </Typography>
 
         </Bounce>
-        <Fade right>
+        <Fade top>
          <Typography 
-        sx={{backgroundColor:'#01411c', width:'210px',borderRadius:'10px', height:'8px', display:'block' , margin: '-30px auto 20px auto'}}
+        sx={{backgroundColor:'#01411c', width:'140px',borderRadius:'10px', height:'4px', display:'block' , margin: '-30px auto 20px auto'}}
         
         display={"flex"}
           justifyContent={"center"}
@@ -64,10 +71,11 @@ const Logos = () => {
         </Fade>
       </Grid>
 
-      <Fade right>
+      <Fade bottom>
       <Grid Item>
         <Typography>Product Code : #017001DL</Typography>
-      <Link to="checkout"> <Buttons act={"Order me"} /> </Link>
+        <Typography style={{fontWeight:'800' , fontSize:"35px" }}>Price: <span style={{color:'red', fontStyle:'italic'}}>N10,000</span></Typography>
+      <NavLink to="checkout"> <Buttons act={"Order me"} /> </NavLink>
         </Grid>
 
         </Fade>
@@ -103,6 +111,8 @@ const Logos = () => {
       component={<p style={{ color: "white", marginTop:'10px' }}>UP</p>}
        />
       </div>
+
+            <GoToTop/>
     </Container>
   );
 };

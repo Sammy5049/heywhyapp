@@ -1,5 +1,5 @@
-import { Grid, Typography, Container, Card } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Grid, Typography, Container, Card,useTheme } from "@mui/material";
+import { Link, NavLink } from "react-router-dom";
 import Buttons from "../Buttons";
 import fly01 from '../Images/Birthdays/birt.jpg'
 import fly01a from '../Images/Flyers/fly1.jpg'
@@ -12,9 +12,12 @@ import ScrollToTop from 'react-scroll-to-top';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import Bounce from 'react-reveal/Bounce';
+import GoToTop from "../Gototop";
 
 
 const Birthday = () => {
+  
+ const theme = useTheme();
 
   const fliers = [
         {img:fly01},
@@ -38,7 +41,9 @@ const Birthday = () => {
             padding: 4,
             fontFamily: "Montserrat",
             color: "#01411c",
-            textTransform:'uppercase'
+            textTransform:'uppercase',
+               fontSize:'32px',
+                [theme.breakpoints.down('sm')]:{fontSize:'24px'}
           }}
           display={"flex"}
           justifyContent={"center"}
@@ -49,9 +54,9 @@ const Birthday = () => {
         </Typography>
 
         </Bounce>
-        <Fade right>
+        <Fade top>
          <Typography 
-        sx={{backgroundColor:'#01411c', width:'180px',borderRadius:'10px', height:'8px', display:'block' , margin: '-30px auto 20px auto'}}
+        sx={{backgroundColor:'#01411c', width:'140px',borderRadius:'10px', height:'3px', display:'block' , margin: '-30px auto 20px auto'}}
         
         display={"flex"}
           justifyContent={"center"}
@@ -65,10 +70,11 @@ const Birthday = () => {
         </Fade>
       </Grid>
 
-      <Fade right>
+      <Fade botom>
       <Grid Item>
         <Typography>Product Code : #017006BI</Typography>
-        <Link to="checkout"> <Buttons act={"Order me"} /> </Link>
+         <Typography style={{fontWeight:'800' , fontSize:"35px" }}>Price: <span style={{color:'red', fontStyle:'italic'}}>N5,000</span></Typography>
+        <NavLink to="checkout"> <Buttons act={"Order me"} /> </NavLink>
         </Grid>
 
         </Fade>
@@ -105,6 +111,8 @@ const Birthday = () => {
        />
 
        </div>
+
+        <GoToTop/>
       
     </Container>
   );

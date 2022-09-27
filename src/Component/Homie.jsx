@@ -10,48 +10,35 @@ import ScrollToTop from 'react-scroll-to-top';
 import Typewriter from "typewriter-effect";
 import {   Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 
-import show3 from './Images/HOMEPAGE1.jpg'
-
-import show2 from './Images/HOMEPAGE2.jpg'
-
-import show1 from './Images/HOMEPAGE3.jpg'
-
-import show from './Images/heywhy.jpg'
-
-import mobileback from './Images/mobileback.jpeg'
-
-import backmob from './Images/backmob.jpeg'
-
-import bmob from './Images/bmob.jpeg'
-import lastt from './Images/lastt.jpeg'
 
 
 import {  keyframes } from "@mui/system";
 
-import h from "./Images/hey.png";
 import Choose from './Choose/Choose';
 import Services from './Choose/services/Services';
+import GoToTop from './Gototop';
 
 const Homie = () => {
 
  const theme = useTheme();
  const match = useMediaQuery(theme.breakpoints.down("md"));
+ const h = 'https://res.cloudinary.com/dgaxfhbbc/image/upload/v1664213233/Heywhy/Homepage/hey_kgpbnp.png'
 
 
 
  const dataa = [
-  {image: show},
-  {image: show1 },
-  {image: show2 },
-  {image: lastt},
+  {image: 'https://res.cloudinary.com/dgaxfhbbc/image/upload/v1664212685/Heywhy/Homepage/HOMEPAGE3_rdwjxj.jpg'},
+  {image: "https://res.cloudinary.com/dgaxfhbbc/image/upload/v1664212686/Heywhy/Homepage/HOMEPAGE1_bedovz.jpg" },
+  {image: "https://res.cloudinary.com/dgaxfhbbc/image/upload/v1664212685/Heywhy/Homepage/heywhy_i3x3vi.jpg" },
+  {image: "https://res.cloudinary.com/dgaxfhbbc/image/upload/v1664212685/Heywhy/Homepage/HOMEPAGE2_hbljdc.jpg"},
  
  ]
 
  const datass = [
-  {image:mobileback },
-  {image:bmob },
-  {image:backmob },
-  {image:lastt}
+  {image:"https://res.cloudinary.com/dgaxfhbbc/image/upload/v1664212686/Heywhy/Homepage/bmob_vtvfng.jpg" },
+  {image:"https://res.cloudinary.com/dgaxfhbbc/image/upload/v1664212685/Heywhy/Homepage/mobileback_pwbxjc.jpg" },
+  {image:"https://res.cloudinary.com/dgaxfhbbc/image/upload/v1664212685/Heywhy/Homepage/backmob_zxndsp.jpg" },
+  {image:"https://res.cloudinary.com/dgaxfhbbc/image/upload/v1664212683/Heywhy/Homepage/lastt_p5ty3k.jpg"}
  ]
 
  var settings = {
@@ -344,6 +331,8 @@ const Homie = () => {
       color='white'
       component={<p style={{ color: "white", marginTop:'10px' }}>Up</p>}
        />
+
+        <GoToTop/>
 
 
     </div>

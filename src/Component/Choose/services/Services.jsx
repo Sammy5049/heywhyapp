@@ -67,7 +67,7 @@ const Services = () => {
                 </Paper>
               </Zoom>
               <Fade>
-                <p>We design your book cover for you to your satisfaction</p>
+                <p>We offer creative book cover design to your satisfaction</p>
               </Fade>
             </div>
           </div>
@@ -81,7 +81,7 @@ const Services = () => {
                 </Paper>
               </Zoom>
               <Fade>
-                <p>We design your book cover for you to your satisfaction</p>
+                <p>We provide to you what you need for your idea</p>
               </Fade>
             </div>
           </div>
@@ -94,7 +94,7 @@ const Services = () => {
                 </Paper>
               </Zoom>
               <Fade>
-                <p>We design your book cover for you to your satisfaction</p>
+                <p>Impress your audience and drive results with our animated video production. Watch your business grow!</p>
               </Fade>
             </div>
           </div>

@@ -3,6 +3,7 @@ import React from 'react'
 import './Terms.css'
 
 import ScrollToTop from 'react-scroll-to-top';
+import GoToTop from './Gototop';
 
 const Term = () => {
   return (
@@ -39,10 +40,11 @@ const Term = () => {
       smooth={true}
       width='20'
       
-      style={{borderRadius:'90px', zIndex:"9999", marginBottom:'40px', backgroundColor:'#01411c'}}
+      style={{borderRadius:'90px', zIndex:"9999", marginBottom:'40px', backgroundColor:'blue'}}
       color='white'
       component={<p style={{ color: "white", marginTop:'10px' }}>Up</p>}
        />
+       <GoToTop/>
        
     </div>
   )

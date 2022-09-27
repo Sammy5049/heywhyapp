@@ -1,7 +1,7 @@
 import {React} from "react";
 import './Footer.css';
 import { Paper, useMediaQuery, useTheme } from "@mui/material";
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 import stock from '../Images/stock.jpg'
 
 const Footie = () => {
@@ -65,8 +65,8 @@ const Footie = () => {
                 </h3>
               
 
-                 <a href='/aboutus'><p style={{ textAlign: "left", fontStyle:'italic' }}>About us</p></a>
-                <a href='/terms'><p style={{ textAlign: "left", fontStyle:'italic' }}>Terms and Conditions</p></a>
+                 <NavLink to='/aboutus'><p style={{ textAlign: "left", fontStyle:'italic' }}>About us</p></NavLink>
+                <NavLink to='/terms'><p style={{ textAlign: "left", fontStyle:'italic' }}>Terms and Conditions</p></NavLink>
                
                 
                 
@@ -144,8 +144,8 @@ const Footie = () => {
                 </h3>
                 <div className="links">
 
-                 <a href='/aboutus'><p style={{ textAlign: "left", fontStyle:'italic' }}>About us</p></a>
-                <a href='/terms'><p style={{ textAlign: "left", fontStyle:'italic' }}>Terms and Conditions</p></a>
+                 <NavLink to='/aboutus'><p style={{ textAlign: "left", fontStyle:'italic' }}>About us</p></NavLink>
+                <NavLink to='/terms'><p style={{ textAlign: "left", fontStyle:'italic' }}>Terms and Conditions</p></NavLink>
                 </div>
               </div>
             </div>

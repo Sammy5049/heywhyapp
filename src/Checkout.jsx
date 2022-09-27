@@ -11,6 +11,7 @@ import ScrollToTop from 'react-scroll-to-top';
 import Fade from "react-reveal/Fade";
 import Bounce from "react-reveal/Bounce";
 import Slide from "react-reveal/Slide";
+import GoToTop from "./Component/Gototop";
 
 const Checkout = () => {
   const { topic } = useParams();
@@ -208,6 +209,8 @@ const Checkout = () => {
         pauseOnHover
         autoClose={10000}
       />
+
+        <GoToTop/>
     </div>
   );
 };
